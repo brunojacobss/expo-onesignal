@@ -11,11 +11,10 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "brunojacobs.sch.onesignaltest"
     },
     "android": {
       "adaptiveIcon": {
@@ -30,7 +29,16 @@
     "extra": {
       "eas": {
         "projectId": "8b0abc84-5624-4dfe-b7c3-bd7641f87661"
-      }
-    }
+      },
+      "oneSignalAppId": "a632ce9e-0cff-4542-9700-6ede7448bfc5"
+    },
+    "plugins": [
+      [
+        "onesignal-expo-plugin",
+        {
+          "mode": "development"
+        }
+      ]
+    ]
   }
 }

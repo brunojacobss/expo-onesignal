@@ -1,5 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { LogLevel, OneSignal } from 'react-native-onesignal';
+import Constants from 'expo-constants';
+
+OneSignal.Debug.setLogLevel(LogLevel.Verbose);
+OneSignal.initialize(Constants.expoConfig.extra.oneSignalAppId);
+
+// Also need enable notifications to complete OneSignal setup
+OneSignal.Notifications.requestPermission(true);
 
 export default function App() {
   return (
